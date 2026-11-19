@@ -38,9 +38,16 @@ QuantumSight/
 ├── .gitignore
 ├── requirements.txt
 ├── README.md
-└── configs/
+├── configs/
+│   ├── __init__.py
+│   └── config.py              # Central configuration
+└── src/
     ├── __init__.py
-    └── config.py          # Central configuration
+    └── quantum/               # Quantum circuit core
+        ├── __init__.py
+        ├── device.py          # PennyLane simulator device factory
+        ├── encodings.py       # Amplitude and angle encoding circuits
+        └── quantum_circuit.py # Parameterized quantum circuit
 ```
 
 ---
@@ -74,7 +81,7 @@ Four experiment configurations are available:
 
 ## 🔮 Roadmap
 
-- [ ] Quantum circuit components (device, encodings)
+- [x] Quantum circuit components (device, encodings)
 - [ ] Classical and hybrid model architectures
 - [ ] Training and evaluation pipeline
 - [ ] Adversarial robustness testing
